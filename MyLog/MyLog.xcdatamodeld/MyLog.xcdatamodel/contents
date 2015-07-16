@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="LogItem" representedClassName="MyLog.LogItem" syncable="YES">
+        <attribute name="itemText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="logitem2" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LogItem2" inverseName="logitem" inverseEntity="LogItem2" syncable="YES"/>
+    </entity>
+    <entity name="LogItem2" representedClassName="MyLog.LogItem2" syncable="YES">
+        <attribute name="number" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="textItem" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="logitem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LogItem" inverseName="logitem2" inverseEntity="LogItem" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="LogItem" positionX="-261" positionY="81" width="128" height="88"/>
+        <element name="LogItem2" positionX="18" positionY="81" width="128" height="88"/>
+    </elements>
 </model>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		937640F31B57202A002DA315 /* LogItem2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937640F21B57202A002DA315 /* LogItem2ViewController.swift */; };
 		93CA06261B55C39A00A9876C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CA06251B55C39A00A9876C /* AppDelegate.swift */; };
 		93CA06291B55C39A00A9876C /* MyLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93CA06271B55C39A00A9876C /* MyLog.xcdatamodeld */; };
 		93CA062B1B55C39A00A9876C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CA062A1B55C39A00A9876C /* ViewController.swift */; };
@@ -14,6 +15,9 @@
 		93CA06301B55C39A00A9876C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93CA062F1B55C39A00A9876C /* Images.xcassets */; };
 		93CA06331B55C39A00A9876C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93CA06311B55C39A00A9876C /* LaunchScreen.xib */; };
 		93CA063F1B55C39A00A9876C /* MyLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CA063E1B55C39A00A9876C /* MyLogTests.swift */; };
+		93CA06491B55C47600A9876C /* LogItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CA06481B55C47600A9876C /* LogItem.swift */; };
+		93CA064B1B55D71000A9876C /* LogItem2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CA064A1B55D71000A9876C /* LogItem2.swift */; };
+		93CA064F1B5603E500A9876C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93CA064E1B5603E500A9876C /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		937640F21B57202A002DA315 /* LogItem2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItem2ViewController.swift; sourceTree = "<group>"; };
 		93CA06201B55C39A00A9876C /* MyLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CA06241B55C39A00A9876C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93CA06251B55C39A00A9876C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,9 @@
 		93CA06381B55C39A00A9876C /* MyLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CA063D1B55C39A00A9876C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93CA063E1B55C39A00A9876C /* MyLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLogTests.swift; sourceTree = "<group>"; };
+		93CA06481B55C47600A9876C /* LogItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItem.swift; sourceTree = "<group>"; };
+		93CA064A1B55D71000A9876C /* LogItem2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItem2.swift; sourceTree = "<group>"; };
+		93CA064E1B5603E500A9876C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93724EF11B574D9C00B93653 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93CA062A1B55C39A00A9876C /* ViewController.swift */,
+				937640F21B57202A002DA315 /* LogItem2ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		93724EF21B5753DF00B93653 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				93CA064A1B55D71000A9876C /* LogItem2.swift */,
+				93CA06481B55C47600A9876C /* LogItem.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		93CA06171B55C39A00A9876C = {
 			isa = PBXGroup;
 			children = (
@@ -80,12 +106,14 @@
 			isa = PBXGroup;
 			children = (
 				93CA06251B55C39A00A9876C /* AppDelegate.swift */,
-				93CA062A1B55C39A00A9876C /* ViewController.swift */,
 				93CA062C1B55C39A00A9876C /* Main.storyboard */,
 				93CA062F1B55C39A00A9876C /* Images.xcassets */,
 				93CA06311B55C39A00A9876C /* LaunchScreen.xib */,
 				93CA06271B55C39A00A9876C /* MyLog.xcdatamodeld */,
+				93724EF21B5753DF00B93653 /* Entities */,
+				93724EF11B574D9C00B93653 /* View Controllers */,
 				93CA06231B55C39A00A9876C /* Supporting Files */,
+				93CA064E1B5603E500A9876C /* CustomTableViewCell.xib */,
 			);
 			path = MyLog;
 			sourceTree = "<group>";
@@ -197,6 +225,7 @@
 			files = (
 				93CA062E1B55C39A00A9876C /* Main.storyboard in Resources */,
 				93CA06331B55C39A00A9876C /* LaunchScreen.xib in Resources */,
+				93CA064F1B5603E500A9876C /* CustomTableViewCell.xib in Resources */,
 				93CA06301B55C39A00A9876C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +245,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				93CA062B1B55C39A00A9876C /* ViewController.swift in Sources */,
+				93CA06491B55C47600A9876C /* LogItem.swift in Sources */,
 				93CA06291B55C39A00A9876C /* MyLog.xcdatamodeld in Sources */,
+				937640F31B57202A002DA315 /* LogItem2ViewController.swift in Sources */,
+				93CA064B1B55D71000A9876C /* LogItem2.swift in Sources */,
 				93CA06261B55C39A00A9876C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +441,7 @@
 				93CA06441B55C39A00A9876C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93CA06451B55C39A00A9876C /* Build configuration list for PBXNativeTarget "MyLogTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +450,7 @@
 				93CA06471B55C39A00A9876C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
