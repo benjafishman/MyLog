@@ -13,7 +13,7 @@ class LogItem: NSManagedObject {
 
     @NSManaged var itemText: String
     @NSManaged var title: String
-    @NSManaged var logItem2: NSSet
+    @NSManaged var logitem2: NSSet
     
     
     class func createInManagedObjectContext(moc: NSManagedObjectContext, title: String, text: String) -> LogItem {

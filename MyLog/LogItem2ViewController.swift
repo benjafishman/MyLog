@@ -10,7 +10,9 @@ import UIKit
 
 import CoreData
 
-class LogItem2ViewController: UIViewController {
+class LogItem2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     private var logItem: LogItem!
     
@@ -25,21 +27,37 @@ class LogItem2ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "LogItems2 View"
+        
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
         logItem = passedLogItem
         
         println(logItem?.title)
         
-        label.text = logItem?.getTitle()
+       // label.text = logItem?.getTitle()
         
-        fetchLog()
+        println("count nsset \(logItem.logitem2.count)")
+        
+        //fetchLog()
+        /*
+        if li2 = logItem.logitem2.allObjects as? LogItem2{
+            println(li2)
+        }
+*/
+       // var i = 0
+        
+        println( "TypeName0 = \(_stdlib_getDemangledTypeName(logItems2))")
+        
+        for object in logItem.logitem2.allObjects {
+            
+            let o = object as LogItem2
+            println("\(o.getTextItem())")
+            logItems2.append(o)
+            //i++
+        }
         
         println("HERE")
-        
-        var logItem2 = logItems2[0]
-        
-        println(logItem2.getTextItem())
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,5 +95,70 @@ class LogItem2ViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    /* UITableView function */
+    
+    // MARK: UITableViewDataSource
+    func tableView(tableView: UITableView,
+        numberOfRowsInSection section: Int) -> Int {
+            return logItems2.count
+    }
+    
+    /*
+    
+    func tableView(tableView: UITableView,
+    heightForRowAtIndexPath
+    indexPath: NSIndexPath) -> Int {
+    return 107
+    }
+    */
+    
+    
+    
+    func tableView(tableView: UITableView,
+        cellForRowAtIndexPath
+        indexPath: NSIndexPath) -> UITableViewCell {
+            
+            
+            let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+                as UITableViewCell
+            
+            cell.textLabel!.text = logItems2[indexPath.row].getTextItem()
+            
+            return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        println("CLICKED CELL")
+    
+    }
+    
+    /*
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if(editingStyle == .Delete ) {
+            // Find the LogItem object the user is trying to delete
+            let logItemToDelete = logItems[indexPath.row]
+            
+            // Delete it from the managedObjectContext
+            managedObjectContext?.deleteObject(logItemToDelete)
+            
+            // Refresh the table view to indicate that it's deleted
+            self.fetchLog()
+            
+            // Tell the table view to animate out that row
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            
+            save()
+        }
+    }
+*/
+
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93724EF41B5C724400B93653 /* LogItem+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93724EF31B5C724400B93653 /* LogItem+CoreData.swift */; };
 		937640F31B57202A002DA315 /* LogItem2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937640F21B57202A002DA315 /* LogItem2ViewController.swift */; };
 		93CA06261B55C39A00A9876C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93CA06251B55C39A00A9876C /* AppDelegate.swift */; };
 		93CA06291B55C39A00A9876C /* MyLog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93CA06271B55C39A00A9876C /* MyLog.xcdatamodeld */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93724EF31B5C724400B93653 /* LogItem+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogItem+CoreData.swift"; sourceTree = "<group>"; };
 		937640F21B57202A002DA315 /* LogItem2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogItem2ViewController.swift; sourceTree = "<group>"; };
 		93CA06201B55C39A00A9876C /* MyLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93CA06241B55C39A00A9876C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				93CA064A1B55D71000A9876C /* LogItem2.swift */,
 				93CA06481B55C47600A9876C /* LogItem.swift */,
+				93724EF31B5C724400B93653 /* LogItem+CoreData.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				937640F31B57202A002DA315 /* LogItem2ViewController.swift in Sources */,
 				93CA064B1B55D71000A9876C /* LogItem2.swift in Sources */,
 				93CA06261B55C39A00A9876C /* AppDelegate.swift in Sources */,
+				93724EF41B5C724400B93653 /* LogItem+CoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

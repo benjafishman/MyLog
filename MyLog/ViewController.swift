@@ -20,6 +20,8 @@ class CustomTableViewCell : UITableViewCell {
         
         println("pressed log button")
         
+        println(AnyObject)
+        
         
     }
     
@@ -148,8 +150,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         /*
          * Doin some fake jazz to preload logItem2, i.e. not production worthy code
          */
+        for var i = 0; i < 3; i++
+        {
+            println("here \(i)")
+            var newTitle = title + " \(i)"
+            
+            var newLogItem2 = LogItem2.createInManagedObjectContext(self.managedObjectContext!, textItem: newTitle, logItem: newLogItem)
+            
+            newLogItem.addLogItem2(newLogItem2)
+            
+            //newLogItem2.logitem = newLogItem
+        }
         
-        var newLogItem2 = LogItem2.createInManagedObjectContext(self.managedObjectContext!, textItem: title, logItem: newLogItem)
+        
+        
         
         // Update the array containing the table view row data
         self.fetchLog()
@@ -173,6 +187,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
+        /* UITableView function */
     
     // MARK: UITableViewDataSource
     func tableView(tableView: UITableView,
@@ -188,7 +203,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return 107
     }
 */
-    
+
    
     
     func tableView(tableView: UITableView,

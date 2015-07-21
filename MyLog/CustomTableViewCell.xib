@@ -12,43 +12,27 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DrX-Fi-duB" id="Lpw-Oc-2Tb">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="139" placeholderIntrinsicHeight="38" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I31-2H-nts">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="139" placeholderIntrinsicHeight="38" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I31-2H-nts">
                         <rect key="frame" x="16" y="106" width="139" height="38"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="121" placeholderIntrinsicHeight="34" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8Z-1j-Id6">
-                        <rect key="frame" x="209" y="110" width="121" height="34"/>
-                        <state key="normal" title="Add Log">
-                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="addLogItem:" destination="DrX-Fi-duB" eventType="touchUpInside" id="ph1-9T-rqB"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="centerX" secondItem="I31-2H-nts" secondAttribute="centerX" constant="90.5" id="KPr-FY-GYX"/>
-                    <constraint firstAttribute="centerX" secondItem="b8Z-1j-Id6" secondAttribute="centerX" constant="-104.5" id="Lxw-kB-dp0"/>
                     <constraint firstAttribute="centerY" secondItem="I31-2H-nts" secondAttribute="centerY" constant="-0.5" id="Q6e-9J-0FD"/>
-                    <constraint firstAttribute="centerY" secondItem="b8Z-1j-Id6" secondAttribute="centerY" constant="-0.5" id="zhf-MN-MKA"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
                         <exclude reference="KPr-FY-GYX"/>
                         <exclude reference="Q6e-9J-0FD"/>
-                        <exclude reference="Lxw-kB-dp0"/>
-                        <exclude reference="zhf-MN-MKA"/>
                     </mask>
                 </variation>
                 <variation key="heightClass=regular-widthClass=compact">
                     <mask key="constraints">
                         <include reference="KPr-FY-GYX"/>
                         <include reference="Q6e-9J-0FD"/>
-                        <include reference="Lxw-kB-dp0"/>
-                        <include reference="zhf-MN-MKA"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
